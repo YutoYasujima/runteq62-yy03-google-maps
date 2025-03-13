@@ -1,0 +1,13 @@
+<h3>My Google Maps Demo</h3>
+<!--The div element for the map -->
+<div
+  data-controller="tutorials"
+  data-api-key="<%= ENV['GOOGLE_MAPS_API_KEY'] %>"
+  data-image-url="<%= asset_path('カエルアイコン調整.png') %>"
+  >
+  <div id="map" data-tutorials-target="map" style="width: 100%; height: 400px;"></div>
+</div>
+<div>
+  <%= link_to 'マップ検索へ', maps_path %>
+  <%= link_to '現在地取得へ', current_places_path %>
+</div>

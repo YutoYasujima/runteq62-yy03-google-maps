@@ -1,0 +1,2 @@
+module CurrentPlacesHelper
+end

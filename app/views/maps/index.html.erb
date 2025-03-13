@@ -1,0 +1,24 @@
+<h2>Google Maps Search</h2>
+
+<div
+  data-controller="maps"
+  data-api-key="<%= ENV['GOOGLE_MAPS_API_KEY'] %>"
+  >
+  <div>
+    <input id="address" type="text" value="東京駅" data-maps-target="address">
+    <input type="button" value="Encode" data-action="click->maps#codeAddress">
+  </div>
+
+  <div id="display" data-maps-target="display">何かが表示される、、、、！</div>
+
+<div>
+  <input type="button" value="東京駅周辺レストラン検索" data-action="click->maps#nearbySearch">
+</div>
+
+  <div id="map" data-maps-target="map" style="height: 600px; width: 600px;"></div>
+</div>
+<div>
+  <%= link_to 'チュートリアルへ', tutorials_path %>
+  <%= link_to '現在地取得へ', current_places_path %>
+</div>
+
